@@ -1,0 +1,129 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins';
+}
+
+.banner-img{
+background:url("../../Assets/images/cool-background.png");
+height: 700px;
+background-size: cover;
+background-repeat: no-repeat;
+-webkit-clip-path: polygon(100% 0, 100% 90%, 0 95%, 0 0);
+clip-path: polygon(100% 0, 100% 90%, 0 95%, 0 0);
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+
+}
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    color: #000;
+    padding: 1rem;
+    position: sticky;
+  }
+  
+  #navbar ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+  }
+  
+  #navbar ul li a {
+    color: #000;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    color: #0000;
+    font-weight: bold;
+    background: linear-gradient(90deg,#6B5DF2 50%,#000 0)  var(--_p,100%)/200% no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    transition: 1s;
+  }
+  #navbar ul li a:hover {
+    --_p: 0%;
+  }
+  .logo >span{
+    color: #f7cc53;
+  }
+  @media (max-width: 640px) {
+    #navbar {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+
+    #navbar ul {
+      padding: 0.5rem;
+    }
+    #navbar ul li a {
+      padding: 0.5rem;
+    }
+  }
+
+  img.logo {
+    height: 100px;
+}
+  
+/* Style the outer list item */
+li {
+  position: relative; /* To position the dropdown */
+  list-style: none;
+}
+
+/* Style the main link */
+li > .login {
+  text-decoration: none;
+  color: #333;
+  padding: 10px 15px;
+  display: inline-block;
+  font-weight: bold;
+}
+
+/* Style the dropdown menu (hidden by default) */
+li > ul {
+  position: absolute;
+  top: 100%; /* Aligns dropdown below the parent item */
+  left: 0;
+  display: none; /* Initially hidden */
+  background-color: #fff;
+  padding: 10px 0;
+  margin: 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  z-index: 1000;
+}
+
+/* Style the dropdown items */
+li > ul > li {
+  padding: 5px 15px;
+  white-space: nowrap; /* Prevents text wrapping */
+}
+
+li > ul > li > a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 5px 10px;
+  transition: background-color 0.3s ease;
+}
+
+li > ul > li > a:hover {
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+/* Show the dropdown on hover */
+li:hover > ul {
+  display: block;
+}
+
+/* Optional: Add some styling for better visuals */
+li:hover > .login {
+  color: #007bff;
+}
+
